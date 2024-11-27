@@ -43,6 +43,12 @@ int main(){
     int qtde;
     pLivro livros;
     scanf("%d", &qtde);
+    
+    if(qtde == 0){
+    printf("Sem livros\n");
+    return 0;
+    }
+    
     livros = livro_aloc(qtde);
     livro_ler(livros, qtde);
     livro_exibe(livros, qtde);
