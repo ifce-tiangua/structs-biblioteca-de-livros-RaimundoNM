@@ -16,20 +16,20 @@ pLivro livro_aloc(int qtde){
 
 void livro_ler(pLivro livros, int qtde){
     for (int i = 0; i < qtde; i++){
-        scanf("%s %s %f %d %s", livros[i].nome, livros[i].isbn,
+        scanf(" %[^\n] %[^\n] %f %d %[^\n]", livros[i].nome, livros[i].isbn,
               &livros[i].preco, &livros[i].score, livros[i].editora);
     }
 }
 
 void livro_exibe(pLivro livros, int qtde){
     for (int i = 0; i < qtde; i++){
-        printf("Livro %d:\n", i+1);
+        printf("Livro %d:\n", i + 1);
         printf("Nome: %s\n", livros[i].nome);
         printf("ISBN: %s\n", livros[i].isbn);
         printf("Preço: R$ %.2f\n", livros[i].preco);
         printf("Score: %d\n", livros[i].score);
         printf("Editora: %s\n", livros[i].editora);
-        if(i < qtde -1){
+        if (i < qtde - 1){
             printf("\n");
         }
     }
